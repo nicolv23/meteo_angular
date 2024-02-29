@@ -1,0 +1,63 @@
+<!-- app.component.html -->
+<div class="container">
+  <div class="info-section-haut">
+    <img src="../assets/chaud.jpg" *ngIf="14 > 15">
+    <img src="../assets/froid.jpg" *ngIf="14 <= 15">
+
+
+    <div class="info-meteo">
+      <div class="lieu">Montréal</div>
+      <div class="temperature">{{ 5.60 | number: '1.0-0'}}°C</div>
+    </div>
+  </div>
+
+  <div class="info-section-bas">
+    <div class="plus-info-label">
+      Plus d'informations
+    </div>
+    <div class="plus-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/min.png">
+          <span>min</span>
+        </div>
+        <div class="info-block-value">
+          -14°C
+        </div>
+      </div>
+
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/max.png">
+          <span>max</span>
+        </div>
+        <div class="info-block-value">
+          °8C
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/humidite.png">
+          <span>humidité</span>
+        </div>
+        <div class="info-block-value">
+          64%
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/vent.png">
+          <span>vent</span>
+        </div>
+        <div class="info-block-value">
+          46 km/h
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
