@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bleu-1: #0f4574;
+  --bleu-2: #1976D2;
+  --jaune-1: #FFC107;
+  --blanc: #FFF;
+  --gris-1: #EDEDED;
+  --ombre-fonce: rgba(0,0,0,0.3);
+  --ombre-light: rgba(255,255,255,0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bleu-1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  height: 80vh;
+  background-color: var(--bleu-2);
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px var(--shadow-dark);
+}
+
+.info-section-haut {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+
+.info-section-haut img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

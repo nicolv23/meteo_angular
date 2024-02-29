@@ -1,7 +1,12 @@
+<!-- app.component.html -->
 <div class="container">
-  <div class="info-entete">
-    <img src="../assets/">
+  <div class="info-section-haut">
+    <img src="../assets/chaud.jpg" *ngIf="14 > 15">
+    <img src="../assets/froid.jpg" *ngIf="14 <= 15">
+  </div>
+  <div class="info-section-bas">
+
   </div>
 </div>
 
-<router-outlet />
+<router-outlet></router-outlet>
