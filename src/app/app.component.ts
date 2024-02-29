@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Importez CommonModule
 import { RouterOutlet } from '@angular/router';
+import { MeteoService } from './services/meteo.service';
+import { response } from 'express';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +12,19 @@ import { RouterOutlet } from '@angular/router';
   // Assurez-vous d'inclure RouterOutlet et CommonModule dans les imports de votre composant
   imports: [RouterOutlet, CommonModule]
 })
-export class AppComponent {
-  title = 'AppMeteo';
+export class AppComponent implements OnInit {
+
+  constructor(private serviceMeteo: MeteoService) {
+
+  }
+
+
+  ngOnInit(): void {
+    this.serviceMeteo.getInformationMeteo('Montréal')
+    .subscribe({
+      next: (response) => {
+        console.log(response);
+      }
+    });
+  }
 }
